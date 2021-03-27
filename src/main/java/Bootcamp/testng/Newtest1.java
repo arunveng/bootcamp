@@ -1,11 +1,10 @@
 package Bootcamp.testng;
 
-import java.util.concurrent.TimeUnit;
+
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+
 import org.testng.annotations.Test;
 
 public class Newtest1 extends Base_class {
