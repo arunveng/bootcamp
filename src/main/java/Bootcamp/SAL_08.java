@@ -1,13 +1,16 @@
 package Bootcamp;
 
+
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.Test;
 
-
+@Test
 public class SAL_08 {
 public static void main(String[] args) throws InterruptedException 
 {
@@ -22,7 +25,7 @@ public static void main(String[] args) throws InterruptedException
 	driver.findElementById("password").sendKeys("Bootcamp$123");
 	driver.findElementById("Login").click();
     driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS);
-    
+   
     
 	driver.findElementByXPath("//div[@class='slds-icon-waffle']").click();
 	driver.findElementByXPath("//button[@class='slds-button']").click();

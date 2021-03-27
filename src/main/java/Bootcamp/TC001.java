@@ -9,10 +9,12 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.Test;
 
 
 public class TC001 {
-public static void main(String[] args) throws InterruptedException {
+@Test	
+public static void main() throws InterruptedException {
 	System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
 	ChromeOptions options=new ChromeOptions();
 	options.addArguments("--disable-notifications");
@@ -24,7 +26,7 @@ public static void main(String[] args) throws InterruptedException {
 	driver.findElementById("password").sendKeys("Bootcamp$123");
 	driver.findElementById("Login").click();
 	
-	driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(70,TimeUnit.SECONDS);
     
 	driver.findElementByXPath("//div[@class='slds-icon-waffle']").click();
 	Thread.sleep(3000);
@@ -39,9 +41,10 @@ public static void main(String[] args) throws InterruptedException {
 	JavascriptExecutor executor = (JavascriptExecutor) driver;
 	executor.executeScript("arguments[0].click();",element);
 		
-	driver.findElementByXPath("//div[text()='New']").click();	
-	driver.findElementByXPath("((//div[@class='uiInput uiInputText uiInput--default uiInput--input'])/input)[1]").click();
-	
+	driver.findElementByXPath("//div[text()='New']").click();
+	Thread.sleep(4000);
+	WebElement namet = driver.findElementByXPath("(//input[@name='Name']");
+	executor.executeScript("arguments[0].click();",namet);
 	WebElement name = driver.findElementByXPath("((//div[@class='uiInput uiInputText uiInput--default uiInput--input'])/input)[1]");
 	name.sendKeys("Saleforce Automation by Arunvengat");
 	String text = name.getText();

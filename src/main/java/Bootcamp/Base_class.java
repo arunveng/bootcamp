@@ -15,7 +15,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 
 public class Base_class{
-	public RemoteWebDriver driver;
+	public  RemoteWebDriver driver;
 	public static ChromeOptions options;
 	public static String file; 
 @Parameters({"url","username","password","browser"})	
