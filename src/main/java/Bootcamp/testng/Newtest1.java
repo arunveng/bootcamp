@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 public class Newtest1 extends Base_class {
-	@Test(priority=3)
+	@Test(groups="smoke")
 	public void Accounts() throws InterruptedException 
 	{
     Thread.sleep(9000);
@@ -20,9 +20,6 @@ public class Newtest1 extends Base_class {
 	JavascriptExecutor exe= (JavascriptExecutor) driver;
 	exe.executeScript("arguments[0].click()", path);
 	Thread.sleep(3000);
-	WebElement path2 = driver.findElementByXPath("//a[@title='Accounts']");
-	JavascriptExecutor exe2= (JavascriptExecutor) driver;
-	exe2.executeScript("arguments[0].click()", path2);
 	
 }
 }

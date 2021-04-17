@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 
 
 public class Testngtest extends Base_class {
-	@Test(priority=1)
+	@Test(dependsOnGroups="smoke")
 	public void main() throws InterruptedException, ParseException {
 		Thread.sleep(9000);
 		JavascriptExecutor executor = (JavascriptExecutor) driver;

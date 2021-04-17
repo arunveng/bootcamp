@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 
 public class SAL_08 extends Base_class {
-	@Test(priority=2)
+	@Test(groups="functional")//(dependsOnMethods="Bootcamp.testng.Testngtest.main")
 public void basic() throws InterruptedException 
 {
 		
