@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="cucumberSuite" verbose="5">
+	<parameter name="url" value="https://login.salesforce.com"></parameter>
+	<parameter name="username" 	value="mercury.bootcamp@testleaf.com"></parameter>
+	<parameter name="password" value="Bootcamp$123"></parameter>
+	<parameter name="browser" value="chrome"></parameter>
+	<test name="Test">
+		<classes>
+			<class name="com.qa.runner.assessment.RunnerAssessment" />
+			<!-- <class name="com.qa.runner.LegalEntitypage_runner" /> -->
+		</classes>
+	</test>
+</suite> <!-- Suite -->
+
+ 
